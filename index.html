@@ -1,0 +1,137 @@
+<!doctype html>
+<!--
+  Root-domain hub for sterniotis.com. One file, no build step, no JavaScript, no analytics,
+  no web fonts, and no subresource requests of any kind: the favicon is inlined as a data URI,
+  so rendering this page opens exactly zero connections beyond the one that fetched it.
+
+  cv/Nick_Sterniotis_Master_CV.pdf is the only other file. It is generated, not hand-made: run
+    python3 scripts/generate_pdf.py --public cv-output/MASTER-CV.md
+  in sternnick/portfolio_private (private). --public drops the master's internal provenance
+  appendix and asserts the removal, so what is published here is the CV without the notes about
+  what the CV is not allowed to claim. Do not edit the PDF by hand.
+
+  Canonical is deliberately not declared: the page is previewed at sternnick.github.io/sterniotis-hub/
+  until sterniotis.com serves it, and a canonical recorded now would be a promise about a host that
+  does not answer yet.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f7f9">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101318">
+<meta name="description" content="Nick Sterniotis, Cloud and Virtualization Infrastructure Engineer. 20+ years in IT: production Linux, containers, hybrid cloud, and automation that is allowed to be trusted.">
+<title>Nick Sterniotis | Cloud &amp; Virtualization Infrastructure Engineer</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxZjVmYmYiLz48dGV4dCB4PSIzMiIgeT0iNDEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJ1aS1tb25vc3BhY2UsbW9ub3NwYWNlIiBmb250LXNpemU9IjI2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjZmZmIj5OUzwvdGV4dD48L3N2Zz4=" type="image/svg+xml">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f6f7f9;
+    --fg: #14181f;
+    --muted: #5c6470;
+    --line: #d8dce2;
+    --card: #ffffff;
+    --accent: #1f5fbf;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101318;
+      --fg: #e8eaee;
+      --muted: #9aa3b0;
+      --line: #262c36;
+      --card: #171b22;
+      --accent: #6fa8f5;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    padding: 2.25rem 1.25rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main { width: 100%; max-width: 44rem; }
+  .id { display: flex; align-items: center; gap: 1.15rem; }
+  .monogram {
+    width: 76px; height: 76px; flex: 0 0 76px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: var(--accent); color: #fff;
+    font-weight: 700; font-size: 1.6rem; letter-spacing: 0.02em;
+    font-family: var(--mono);
+  }
+  h1 { margin: 0; font-size: clamp(1.7rem, 4.5vw, 2.35rem); line-height: 1.15; letter-spacing: -0.01em; }
+  .role { margin: 0.2rem 0 0; color: var(--muted); font-size: 1.02rem; }
+  .summary { margin: 1.9rem 0 0; max-width: 40rem; }
+  nav { margin: 2rem 0 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+  .link {
+    display: block; padding: 0.95rem 1.05rem; text-decoration: none;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    color: var(--fg); transition: border-color 120ms ease, transform 120ms ease;
+  }
+  .link:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .link strong { display: block; font-weight: 600; }
+  .link span { display: block; margin-top: 0.15rem; color: var(--muted); font-size: 0.86rem; font-family: var(--mono); }
+  footer {
+    margin: 2.4rem 0 0; padding-top: 1.1rem; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 0.92rem;
+  }
+  footer p { margin: 0 0 0.4rem; }
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { .link { transition: none; } .link:hover { transform: none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="id">
+    <div class="monogram" role="img" aria-label="Monogram of the initials N S">NS</div>
+    <div>
+      <h1>Nick Sterniotis</h1>
+      <p class="role">Cloud &amp; Virtualization Infrastructure Engineer</p>
+    </div>
+  </div>
+
+  <p class="summary">
+    20+ years in IT, the last three owning production cloud and hybrid infrastructure across two data
+    centres: Linux hosts, container workloads, and the pipelines and controls that change them. I write
+    automation that is allowed to be trusted, and I keep finding controls that had quietly stopped
+    working, which is the same habit pointed in the other direction.
+  </p>
+
+  <nav aria-label="Where to go next">
+    <a class="link" href="https://portfolio.sterniotis.com/">
+      <strong>Technical portfolio</strong>
+      <span>portfolio.sterniotis.com</span>
+    </a>
+    <a class="link" href="./cv/Nick_Sterniotis_Master_CV.pdf">
+      <strong>Master CV</strong>
+      <span>PDF, 4 pages</span>
+    </a>
+    <a class="link" href="https://www.linkedin.com/in/nsterniotis">
+      <strong>LinkedIn</strong>
+      <span>linkedin.com/in/nsterniotis</span>
+    </a>
+    <a class="link" href="https://github.com/sternnick">
+      <strong>GitHub</strong>
+      <span>github.com/sternnick</span>
+    </a>
+  </nav>
+
+  <footer>
+    <p>Cork, Ireland &middot; <a href="mailto:nick@sterniotis.com">nick@sterniotis.com</a></p>
+    <p>The portfolio states an evidence tier against every claim it makes: document, code, lab, or
+    proposed. Claims that were withdrawn stay named rather than quietly deleted.</p>
+  </footer>
+</main>
+</body>
+</html>
